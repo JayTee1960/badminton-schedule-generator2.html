@@ -563,7 +563,7 @@
                 gamesPerPlayer = 6;
             } else if (totalPlayers === 18 && numTeams === 3 && playersPerTeam === 6) {
                 maxGames = 27;
-                gamesPerPlayer = "5-6";
+                gamesPerPlayer = "5-7";
             }
             
             document.getElementById('config-info').style.display = 'block';
@@ -851,7 +851,7 @@
                 </div>
             `;
             
-            // PERFECT SCHEDULE - No conflicts, minimal repetition
+            // 100% CONFLICT-FREE SCHEDULE
             const pairingSchedule = [
                 { rivalry: 0, t1: [0,1], t2: [0,1] },  // Game 1
                 { rivalry: 1, t1: [2,3], t2: [2,3] },  // Game 2
@@ -897,7 +897,6 @@
                 
                 allGames.push({
                     team1Name: team1.name,
-                    
                     team2Name: team2.name,
                     team1Pair: [team1.players[schedule.t1[0]], team1.players[schedule.t1[1]]],
                     team2Pair: [team2.players[schedule.t2[0]], team2.players[schedule.t2[1]]]
