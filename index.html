@@ -212,43 +212,45 @@
         
         .schedule-header {
             text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
             border-bottom: 2px solid #333;
         }
         
         .schedule-header h2 {
             margin: 0;
-            font-size: 24px;
+            font-size: 20px;
             color: #333;
         }
         
         .schedule-header p {
             margin: 5px 0 0 0;
             color: #666;
+            font-size: 14px;
         }
         
         .teams-legend {
             background: #f8f9fa;
-            padding: 15px;
+            padding: 10px;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .teams-legend h4 {
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             color: #333;
+            font-size: 14px;
         }
         
         .team-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 8px;
         }
         
         .team-item {
             background: white;
-            padding: 8px 12px;
+            padding: 6px 10px;
             border-radius: 6px;
             border-left: 3px solid #667eea;
         }
@@ -256,54 +258,57 @@
         .team-name {
             font-weight: bold;
             color: #333;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
+            font-size: 13px;
         }
         
         .players {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
         }
         
         .round-section {
-            margin-bottom: 20px;
-            padding: 15px;
+            margin-bottom: 12px;
+            padding: 10px;
             background: #f8f9fa;
             border-radius: 8px;
+            page-break-inside: avoid;
         }
         
         .round-title {
             font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 12px;
+            font-size: 13px;
+            margin-bottom: 8px;
             color: #667eea;
-            padding-bottom: 8px;
+            padding-bottom: 5px;
             border-bottom: 2px solid #ddd;
         }
         
         .courts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
         }
         
         .court-card {
             background: white;
-            padding: 12px;
+            padding: 8px;
             border-radius: 6px;
             border: 1px solid #ddd;
         }
         
         .court-header {
             font-weight: bold;
-            margin-bottom: 10px;
-            padding-bottom: 6px;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
             border-bottom: 2px solid #667eea;
             color: #333;
+            font-size: 11px;
         }
         
         .game-row {
-            padding: 10px;
-            margin-bottom: 8px;
+            padding: 6px;
+            margin-bottom: 5px;
             border: 1px solid #e0e0e0;
             border-radius: 6px;
             background: #fafafa;
@@ -312,12 +317,14 @@
         .game-number {
             font-weight: bold;
             color: #667eea;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+            font-size: 10px;
         }
         
         .matchup {
-            margin-bottom: 8px;
-            font-size: 14px;
+            margin-bottom: 6px;
+            font-size: 12px;
+            font-weight: 600;
         }
         
         .vs {
@@ -330,14 +337,16 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 11px;
         }
         
         .score-inputs input {
-            width: 50px;
-            padding: 6px;
+            width: 45px;
+            padding: 4px;
             text-align: center;
             border: 2px solid #ddd;
             border-radius: 4px;
+            font-size: 11px;
         }
         
         .score-inputs input:focus {
@@ -382,16 +391,114 @@
             body {
                 background: white;
                 padding: 0;
+                margin: 0;
             }
             
             .container {
                 box-shadow: none;
-                padding: 10px;
+                padding: 5px;
+                max-width: 100%;
             }
             
             .action-bar,
-            .results-section {
+            .results-section,
+            .header {
                 display: none !important;
+            }
+            
+            .schedule-wrapper {
+                border: none;
+                padding: 0;
+            }
+            
+            .schedule-header {
+                display: none !important;
+            }
+            
+            .teams-legend {
+                padding: 5px;
+                margin-bottom: 8px;
+                font-size: 10px;
+            }
+            
+            .teams-legend h4 {
+                font-size: 11px;
+                margin-bottom: 5px;
+            }
+            
+            .team-list {
+                gap: 5px;
+            }
+            
+            .team-item {
+                padding: 4px 6px;
+            }
+            
+            .team-name {
+                font-size: 11px;
+            }
+            
+            .players {
+                font-size: 9px;
+            }
+            
+            .round-section {
+                margin-bottom: 8px;
+                padding: 6px;
+                page-break-inside: avoid;
+            }
+            
+            .round-title {
+                font-size: 11px;
+                margin-bottom: 5px;
+                padding-bottom: 3px;
+            }
+            
+            .courts-grid {
+                gap: 6px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .court-card {
+                padding: 5px;
+            }
+            
+            .court-header {
+                font-size: 9px;
+                margin-bottom: 4px;
+                padding-bottom: 2px;
+            }
+            
+            .game-row {
+                padding: 4px;
+                margin-bottom: 3px;
+            }
+            
+            .game-number {
+                font-size: 8px;
+                margin-bottom: 2px;
+            }
+            
+            .matchup {
+                font-size: 12px;
+                margin-bottom: 4px;
+                line-height: 1.2;
+            }
+            
+            .score-inputs {
+                font-size: 9px;
+                gap: 4px;
+            }
+            
+            .score-inputs input {
+                width: 35px;
+                padding: 2px;
+                font-size: 9px;
+            }
+            
+            /* Force 2-page layout */
+            .round-section:nth-child(6) {
+                page-break-before: always;
             }
         }
     </style>
@@ -563,7 +670,7 @@
                 gamesPerPlayer = 6;
             } else if (totalPlayers === 18 && numTeams === 3 && playersPerTeam === 6) {
                 maxGames = 27;
-                gamesPerPlayer = "5-7";
+                gamesPerPlayer = 6;
             }
             
             document.getElementById('config-info').style.display = 'block';
@@ -1120,39 +1227,22 @@
     <meta charset="UTF-8">
     <title>Badminton Tournament</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        .schedule-header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #333; padding-bottom: 10px; }
-        .teams-legend { background: #f5f5f5; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
-        .team-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-        .team-item { background: white; padding: 8px; border-left: 3px solid #667eea; border-radius: 4px; }
-        .team-name { font-weight: bold; }
-        .players { font-size: 12px; color: #666; }
-        .round-section { margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; }
-        .round-title { font-weight: bold; margin-bottom: 10px; color: #667eea; }
-        .courts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 15px; }
-        .court-card { background: white; padding: 12px; border: 1px solid #ddd; border-radius: 6px; }
-        .court-header { font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #667eea; padding-bottom: 5px; }
-        .game-row { padding: 10px; margin-bottom: 8px; border: 1px solid #e0e0e0; border-radius: 6px; }
-        .game-number { font-weight: bold; color: #667eea; margin-bottom: 5px; }
-        .matchup { margin-bottom: 8px; }
+        body { font-family: Arial, sans-serif; padding: 10px; margin: 0; }
+        .schedule-header { display: none; }
+        .teams-legend { background: #f5f5f5; padding: 5px; margin-bottom: 8px; border-radius: 5px; font-size: 10px; }
+        .team-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+        .team-item { background: white; padding: 4px 6px; border-left: 3px solid #667eea; border-radius: 4px; }
+        .team-name { font-weight: bold; font-size: 11px; }
+        .players { font-size: 9px; color: #666; }
+        .round-section { margin-bottom: 8px; padding: 6px; background: #f8f9fa; border-radius: 8px; page-break-inside: avoid; }
+        .round-title { font-weight: bold; margin-bottom: 5px; color: #667eea; font-size: 11px; padding-bottom: 3px; border-bottom: 2px solid #ddd; }
+        .courts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+        .court-card { background: white; padding: 5px; border: 1px solid #ddd; border-radius: 6px; }
+        .court-header { font-weight: bold; margin-bottom: 4px; border-bottom: 2px solid #667eea; padding-bottom: 2px; font-size: 9px; }
+        .game-row { padding: 4px; margin-bottom: 3px; border: 1px solid #e0e0e0; border-radius: 6px; }
+        .game-number { font-weight: bold; color: #667eea; margin-bottom: 2px; font-size: 8px; }
+        .matchup { margin-bottom: 4px; font-size: 12px; font-weight: 600; line-height: 1.2; }
         .vs { font-weight: bold; margin: 0 6px; }
-        .score-inputs { display: flex; gap: 8px; align-items: center; }
-        .score-inputs input { width: 50px; padding: 6px; text-align: center; border: 2px solid #ddd; border-radius: 4px; }
-    </style>
-</head>
-<body>
-    ${scheduleContent}
-</body>
-</html>`;
-            
-            const blob = new Blob([html], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `badminton-tournament-${currentConfig.date}.html`;
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-    </script>
-</body>
-</html>
+        .score-inputs { display: flex; gap: 4px; align-items: center; font-size: 9px; }
+        .score-inputs input { width: 35px; padding: 2px; text-align: center; border: 2px solid #ddd; border-radius: 4px; font-size: 9px; }
+        .round-section:nth-child(6) { page-break-before: always; }
