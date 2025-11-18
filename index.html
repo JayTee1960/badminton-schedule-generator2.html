@@ -1246,3 +1246,22 @@
         .score-inputs { display: flex; gap: 4px; align-items: center; font-size: 9px; }
         .score-inputs input { width: 35px; padding: 2px; text-align: center; border: 2px solid #ddd; border-radius: 4px; font-size: 9px; }
         .round-section:nth-child(6) { page-break-before: always; }
+
+</style>
+</head>
+<body>
+    ${scheduleContent}
+</body>
+</html>`;
+            
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `badminton-tournament-${currentConfig.date}.html`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
